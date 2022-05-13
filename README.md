@@ -1,6 +1,6 @@
 # About a project
 
-This is a project about notes on a native Javascript, but I decided to move away from the standard interaction with DOM elements, and created a simple framework based on which I made the notes project. ([promo](https://youtu.be/n-ShjdSx-Fw), [final project](relaxed-snickerdoodle-f24efa.netlify.app))
+This is a project about notes on a native Javascript, but I decided to move away from the standard interaction with DOM elements, and created a simple framework based on which I made the notes project. ([promo](https://youtu.be/n-ShjdSx-Fw), [final project](https://relaxed-snickerdoodle-f24efa.netlify.app/))
 
 
 # About my simple framework
