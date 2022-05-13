@@ -1,0 +1,69 @@
+.screen.preview {
+    background-color: #ff4b3a;
+}
+
+.screen.preview > .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 160px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 65px;
+    line-height: 86.84%;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+}
+
+.screen.preview > .girl {
+    position: absolute;
+    width: 358.1px;
+    height: 434.36px;
+    left: -2px;
+    top: 366.34px;
+    background: url("../images/ToyFaces_Tansparent_BG_49.png") no-repeat;
+}
+
+.screen.preview > .girl::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: -36px;
+    bottom: -62px;
+    background: linear-gradient(180deg, rgba(255, 71, 11, 0.1) -40.06%, #FF470B 75.85%);
+    filter: blur(30px);
+}
+
+
+.screen.preview > .boy {
+    position: absolute;
+    width: 225.4px;
+    height: 298.54px;
+    right: -10px;
+    top: 441.46px;
+    background: url("../images/ToyFaces_Tansparent_BG_29.png") no-repeat;
+}
+
+.screen.preview > .boy::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    right: -5px;
+    bottom: -50px;
+    background: linear-gradient(169.36deg, rgba(255, 71, 11, 0.51) -194.92%, #FF470B 92.09%);
+    filter: blur(30px);
+    transform: rotate(-2deg);
+}
+
+.circle {
+    position: absolute;
+    width: 73px;
+    height: 73px;
+    left: 49px;
+    top: 56px;
+    background: #FFFFFF;
+    border-radius: 50%;
+}

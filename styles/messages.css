@@ -1,0 +1,83 @@
+.container-messages {
+    position: fixed;
+    max-width: 300px;
+    width: 100%;
+    top: 0;
+    height: 290px;
+    right: 0;
+    overflow: hidden;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.message {
+    height: 60px;
+    margin: 10px;
+    padding: 10px 45px 10px 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    pointer-events: visible;
+}
+
+.btn-close {
+    position: absolute;
+    font-size: 25px;
+    top: 50%;
+    cursor: pointer;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    transform: translateY(-50%);
+    transition: background-color 0.4s;
+}
+
+.btn-close:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-close:before, .btn-close:after {
+    position: absolute;
+    left: 14px;
+    top: 7px;
+    content: '';
+    height: 16px;
+    width: 2px;
+    background-color: #fff;
+}
+
+.btn-close:before {
+    transform: rotate(45deg);
+}
+
+.btn-close:after {
+    transform: rotate(-45deg);
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 17, 17, 0.7);
+    left: 0;
+    height: 5px;
+}
+
+.progress-line {
+    width: 0;
+    height: 100%;
+    background-color: rgba(92, 255, 17, 0.7);
+}
+
+.container-messages:hover {
+    overflow: auto;
+}
+
+.container-messages::-webkit-scrollbar {
+    width: 0;
+}

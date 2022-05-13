@@ -1,0 +1,36 @@
+@import url("content.css");
+@import url("preview.css");
+@import url("button.css");
+@import url("modal.css");
+@import url("messages.css");
+@import url("preloader.css");
+
+.hidden {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.enter-component {
+    opacity: 0;
+}
+
+.enter-active-component {
+    opacity: 1;
+}
+
+.leave-component {
+    opacity: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

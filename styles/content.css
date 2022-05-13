@@ -1,0 +1,339 @@
+.screen {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    background: #f5f5f8;
+    display: none;
+    transition: opacity 0.5s, transform 0.3s;
+}
+
+.screen.left {
+    transform: translateX(-110%);
+}
+
+.screen.right {
+    transform: translateX(110%);
+}
+
+.screen.page-not-found {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen > .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 60px 50px 90px 50px;
+    position: relative;
+}
+
+.screen > .container.note {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 50px 50px;
+    position: relative;
+}
+
+.container > .title {
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.container .section {
+    margin: 50px 0;
+}
+
+.container .section > .title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.container .section > .block {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+    padding: 20px 17px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block-poster {
+    max-width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.block-poster img {
+    width: 100%;
+    height: 100%;
+}
+
+.block-info {
+    width: calc(100% - 75px);
+    margin-left: 15px;
+}
+
+.block-info > .title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin: 0;
+}
+
+.block-info > .date {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 0.5;
+    margin: 8px 0;
+}
+
+.block-info > .text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.block-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 16px 28px 16px 0;
+    width: 100%;
+}
+
+.block-item:not(:last-child) {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.block-item > .date {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+    text-align: center;
+    max-width: 50px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.block-item > .status {
+    min-width: 40px;
+    height: 40px;
+    background: #aeaeae;
+    border-radius: 10px;
+    margin: 0 15px;
+}
+
+.block-item .text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+    word-break: break-word;
+    text-decoration: none;
+}
+
+.block-item .text:hover {
+    color: rgb(0 0 0 / 65%);
+}
+
+.block-item-actions {
+    position: absolute;
+    right: 0;
+}
+
+.block-actions {
+    position: absolute;
+    right: 0;
+    background: #fff;
+    z-index: 100;
+    display: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.block-item-actions.show .block-actions {
+    display: block;
+    width: 150px;
+}
+
+.block-actions > .action {
+    padding: 20px 30px 20px 30px;
+    cursor: pointer;
+}
+
+.block-actions > .action:not(:last-child) {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.09);
+}
+
+.block-actions > .action:hover {
+    color: #f88e2b;
+}
+
+.section-statuses {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-statuses > .status {
+    padding: 10px 18px;
+    background-color: #fff;
+    border-radius: 30px;
+    height: 44px;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all .15s ease-in-out;
+    font-family: Montserrat;
+    display: flex;
+    align-items: center;
+}
+
+.section-statuses > .status.active {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 5%);
+    transform: translateY(1px);
+}
+
+.section-statuses > .status:hover {
+    box-shadow: 0 7px 15px rgb(0 0 0 / 4%);
+}
+
+.section-statuses > .status > .status-circle {
+    display: inline-block;
+    border-radius: 30px;
+    height: 10px;
+    width: 10px;
+    margin-right: 8px;
+}
+
+.block-note {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 40px rgb(0 0 0 / 3%);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100vh - 235px);
+}
+
+.block-note .field {
+    padding: 20px 17px 20px;
+}
+
+.block-note textarea::-webkit-scrollbar {
+    width: 10px;
+}
+
+.container > .date {
+    font-size: 10px;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.field {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.field.title {
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.btn-back {
+    position: absolute;
+    left: 60px;
+    top: 90px;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s, translateY 0.15s;
+}
+
+.btn-back:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.btn-back:active {
+    transform: translateY(1px);
+}
+
+.arrow {
+    border: solid rgba(0, 0, 0, 0.8);
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 4px;
+}
+  
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.container-select {
+    text-align: center;
+}
+
+.container-select select {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 540px) {
+    .screen > .container {
+        padding: 50px 35px 90px;
+    }
+
+    .btn-back {
+        left: 35px;
+    }
+}
